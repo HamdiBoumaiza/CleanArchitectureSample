@@ -1,8 +1,16 @@
-apply plugin: 'java-library'
+apply plugin: 'kotlin'
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //Coroutines
+    implementation Libs.coroutinesCore
+    implementation Libs.coroutinesAndroid
+
+    //Test
+    testImplementation TestLibs.junit
+}
+repositories {
+    mavenCentral()
 }
 
-sourceCompatibility = "7"
-targetCompatibility = "7"
