@@ -1,4 +1,4 @@
-package com.hamdi.data;
+package com.hb.data;
 
 import org.junit.Test;
 

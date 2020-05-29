@@ -1,4 +1,4 @@
-package com.hamdi.domain;
+package com.hb.data;
 
 public class MyClass {
 }
