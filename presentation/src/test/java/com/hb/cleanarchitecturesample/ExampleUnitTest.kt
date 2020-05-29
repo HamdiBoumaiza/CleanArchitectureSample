@@ -1,4 +1,4 @@
-package com.hamdi.cleanarchitecturesample
+package com.hb.cleanarchitecturesample
 
 import org.junit.Test
 

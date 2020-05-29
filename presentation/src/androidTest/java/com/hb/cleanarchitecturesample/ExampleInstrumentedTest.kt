@@ -1,4 +1,4 @@
-package com.hamdi.cleanarchitecturesample
+package com.hb.cleanarchitecturesample
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
