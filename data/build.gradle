@@ -33,6 +33,13 @@ dependencies {
     //Kotlin
     implementation Libs.kotlin
 
+    //Retrofit2
+    implementation Libs.retrofit
+    implementation Libs.retrofitGsonConverter
+
+
+    implementation Libs.gson
+
     //Test
     testImplementation TestLibs.junit
     androidTestImplementation TestLibs.testRunner

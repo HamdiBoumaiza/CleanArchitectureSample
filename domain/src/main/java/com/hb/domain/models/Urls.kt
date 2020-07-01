@@ -1,4 +1,4 @@
-package com.hb.domain.entities
+package com.hb.domain.models
 
 
 data class Urls(

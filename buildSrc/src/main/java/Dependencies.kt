@@ -26,7 +26,7 @@ object Versions {
     const val constraintLayout = "1.1.3"
     const val lifecycle = "2.2.0"
     const val okhttp3 = "4.5.0"
-    const val gson = "1.1.1"
+    const val gson = "2.8.6"
     const val stetho = "1.5.1"
     const val retrofit = "2.8.1"
     const val coroutine = "1.3.5"
@@ -36,6 +36,7 @@ object Versions {
 //    const val koinArchitecture = "0.8.2"
     const val googleMaterial = "1.1.0"
     const val coil = "0.11.0"
+    const val securityCrypto = "1.0.0-rc02"
     const val junit = "4.13"
     const val testCoreRunner = "1.2.0"
     const val espresso = "3.2.0"
@@ -91,6 +92,11 @@ object Libs {
 
     //Coil
     const val coil = "io.coil-kt:coil:${Versions.coil}"
+
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
+
+    const val securityEncryption = "androidx.security:security-crypto:${Versions.securityCrypto}"
+
 }
 
 object TestLibs {
