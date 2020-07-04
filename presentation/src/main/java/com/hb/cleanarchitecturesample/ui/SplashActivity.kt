@@ -15,6 +15,6 @@ class SplashActivity : BaseActivity() {
     private fun goToHomeScreen() {
         Handler().postDelayed({
             appRouter.goToActivity(MainActivity::class.java, true)
-        }, 2000)
+        }, 1000)
     }
 }

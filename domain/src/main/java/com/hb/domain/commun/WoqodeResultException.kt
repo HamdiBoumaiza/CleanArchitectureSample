@@ -1,17 +1,17 @@
 package com.hb.domain.commun
 
 sealed class WoqodeResultException(
-    errorMessage: String
-) : RuntimeException(errorMessage) {
+    val messageResource: Int
+) : RuntimeException("") {
 
-    class Connection(messageResource: String) : WoqodeResultException(messageResource)
+    class Connection(messageResource: Int) : WoqodeResultException(messageResource)
 
-    class Unexpected(messageResource: String) : WoqodeResultException(messageResource)
+    class Unexpected(messageResource: Int) : WoqodeResultException(messageResource)
 
-    class Timeout(messageResource: String) : WoqodeResultException(messageResource)
+    class Timeout(messageResource: Int) : WoqodeResultException(messageResource)
 
-    class Client(messageResource: String) : WoqodeResultException(messageResource)
+    class Client(messageResource: Int) : WoqodeResultException(messageResource)
 
-    class Server(messageResource: String) : WoqodeResultException(messageResource)
+    class Server(messageResource: Int) : WoqodeResultException(messageResource)
 
 }

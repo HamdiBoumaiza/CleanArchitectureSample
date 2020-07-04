@@ -1,5 +1,6 @@
 package com.hb.cleanarchitecturesample.di.module
 
+import com.hb.data.ApiService
 import com.hb.data.datasource.WallpaperDataSourceImpl
 import com.hb.data.repository.WallpaperRepositoryImpl
 import com.hb.domain.repository.WallpaperRepository
@@ -12,8 +13,8 @@ class RepositoriesModule {
 
     @Provides
     @Singleton
-    fun provideAppRepository(): WallpaperRepository {
-        val appRemoteDataSource = WallpaperDataSourceImpl()
+    fun provideAppRepository(apiService: ApiService): WallpaperRepository {
+        val appRemoteDataSource = WallpaperDataSourceImpl(apiService)
         return WallpaperRepositoryImpl(appRemoteDataSource)
     }
 

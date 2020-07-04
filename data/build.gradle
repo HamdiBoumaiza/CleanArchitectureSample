@@ -33,6 +33,9 @@ dependencies {
     //Kotlin
     implementation Libs.kotlin
 
+    implementation Libs.coroutinesAndroid
+    implementation Libs.coroutinesCore
+
     //Retrofit2
     implementation Libs.retrofit
     implementation Libs.retrofitGsonConverter

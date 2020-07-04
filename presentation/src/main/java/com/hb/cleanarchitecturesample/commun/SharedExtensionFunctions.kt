@@ -62,43 +62,6 @@ fun <VM : ViewModel> Fragment.viewModelProvider(
     provider: ViewModelProvider.Factory, model: KClass<VM>
 ) = ViewModelProvider(this, provider).get(model.java)
 
-/**
- * extension function that listen to edit text changes and take a function as an action
- */
-fun EditText.onChange(cb: (String) -> Unit) {
-    this.addTextChangedListener(object : TextWatcher {
-        override fun afterTextChanged(s: Editable?) {
-            cb(s.toString())
-        }
-
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            //TODO
-        }
-
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            //TODO
-        }
-    })
-}
-
-/**
- * extension function that returns a view pager position and take a unit as a param
- */
-fun ViewPager.addPageChangeListener(position: (Int) -> Unit) {
-    addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-        override fun onPageScrolled(
-            pos: Int, positionOffset: Float, positionOffsetPixels: Int
-        ) {
-            position(pos)
-        }
-
-        override fun onPageSelected(position: Int) {
-        }
-
-        override fun onPageScrollStateChanged(state: Int) {
-        }
-    })
-}
 
 /**
  * extension function for the Toast class that takes a string

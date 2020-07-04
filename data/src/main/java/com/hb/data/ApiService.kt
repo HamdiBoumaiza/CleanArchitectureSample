@@ -1,6 +1,6 @@
 package com.hb.data
 
-import com.hb.data.entities.PhotosResponse
+import com.hb.data.models.PhotosResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

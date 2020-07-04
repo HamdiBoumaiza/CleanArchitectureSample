@@ -3,6 +3,7 @@ package com.hb.cleanarchitecturesample
 import android.app.Application
 import com.facebook.stetho.Stetho
 import com.hb.cleanarchitecturesample.di.component.AppComponent
+import com.hb.cleanarchitecturesample.di.component.DaggerAppComponent
 import com.hb.cleanarchitecturesample.di.module.AppModule
 import timber.log.Timber
 
@@ -17,6 +18,7 @@ class WallpaperApplication : Application() {
 
         initStetho()
         initTimber()
+        initDI()
     }
 
 
@@ -30,6 +32,6 @@ class WallpaperApplication : Application() {
     }
 
     private fun initDI() {
-        WoqodeApplication.appComponents = DaggerAppComponent.builder().appModule(AppModule(this)).build()
+        WallpaperApplication.appComponents = DaggerAppComponent.builder().appModule(AppModule(this)).build()
     }
 }

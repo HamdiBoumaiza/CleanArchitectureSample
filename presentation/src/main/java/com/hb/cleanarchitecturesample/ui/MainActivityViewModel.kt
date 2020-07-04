@@ -4,35 +4,35 @@ package com.hb.cleanarchitecturesample.ui
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.proxym.domain.commun.onError
-import com.proxym.domain.commun.onSuccess
-import com.proxym.domain.models.User
-import com.proxym.domain.usecases.GetUserUseCase
 import com.hb.cleanarchitecturesample.baseui.BaseViewModel
-import com.hb.domain.models.Photos
+import com.hb.domain.commun.onError
+import com.hb.domain.commun.onSuccess
+import com.hb.domain.models.PhotoModel
+import com.hb.domain.usecase.GePhotosRequest
+import com.hb.domain.usecase.GetListPhotosUseCase
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MainActivityViewModel @Inject constructor(private val getUserUseCase: GetUserUseCase) :
+class MainActivityViewModel @Inject constructor(private val getListPhotosUseCase: GetListPhotosUseCase) :
     BaseViewModel() {
 
-    private val _resultUser = MutableLiveData<Photos>()
-    val resultUser: LiveData<Photos> = _resultUser
+    private val _resultUser = MutableLiveData<List<PhotoModel>>()
+    val resultUser: LiveData<List<PhotoModel>> = _resultUser
 
-    private val _resultError = MutableLiveData<Any>()
-    val resultError: LiveData<Any> = _resultError
+    private val _resultError = MutableLiveData<Int>()
+    val resultError: LiveData<Int> = _resultError
 
-    fun getPhotos(params: HashMap<String, String>) {
+    fun getPhotos(request : GePhotosRequest) {
         viewModelScope.launch {
             showLoadingToggle(true)
-            getUserUseCase(params)
+            getListPhotosUseCase(request)
                 .onSuccess {
                     showLoadingToggle(false)
                     _resultUser.postValue(it)
                 }
                 .onError {
                     showLoadingToggle(false)
-                    _resultError.postValue(it.errorMessage)
+                    _resultError.postValue(it.messageResource)
                 }
         }
     }

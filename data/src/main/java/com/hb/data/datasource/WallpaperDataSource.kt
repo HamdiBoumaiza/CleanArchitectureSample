@@ -1,6 +1,6 @@
 package com.hb.data.datasource
 
-import com.hb.data.entities.PhotosResponse
+import com.hb.data.models.PhotosResponse
 import com.hb.domain.usecase.GePhotosRequest
 
 
