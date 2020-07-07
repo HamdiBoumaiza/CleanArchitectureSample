@@ -40,6 +40,12 @@ object Versions {
     const val junit = "4.13"
     const val testCoreRunner = "1.2.0"
     const val espresso = "3.2.0"
+    const val mockWebServer = "4.2.1"
+    const val googleTruth = "1.0"
+    const val coreTesting = "1.1.1"
+    const val barista = "3.5.0"
+    const val androidxJunit = "1.1.1"
+    const val fragmentTesting = "1.2.5"
 }
 
 object Libs {
@@ -100,7 +106,19 @@ object Libs {
 }
 
 object TestLibs {
+    //Unit tests
     const val junit = "junit:junit:${Versions.junit}"
-    const val testRunner = "com.android.support.test:runner:${Versions.testCoreRunner}"
+    const val androidxJunit = "androidx.test.ext:junit:${Versions.androidxJunit}"
+    const val androidxJunitExtension = "androidx.test.ext:junit-ktx:${Versions.androidxJunit}"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.mockWebServer}"
+    const val googleTruth = "com.google.truth:truth:${Versions.googleTruth}"
+    const val coreTesting = "android.arch.core:core-testing:${Versions.coreTesting}"
+    const val coroutineTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutine}"
+
+    //UI Android Test
+    const val testRunner = "androidx.test:runner:${Versions.testCoreRunner}"
     const val espresso = "com.android.support.test.espresso:espresso-core:${Versions.espresso}"
+    const val barista = "com.schibsted.spain:barista:${Versions.barista}"
+    const val excludeKotlin = "org.jetbrains.kotlin"
+    const val fragmentTests = "androidx.fragment:fragment-testing:${Versions.fragmentTesting}"
 }

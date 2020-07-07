@@ -6,7 +6,7 @@ import com.hb.domain.models.PhotoModel
 import com.hb.domain.repository.WallpaperRepository
 import javax.inject.Inject
 
-class GetListPhotosUseCase @Inject constructor(
+open class GetListPhotosUseCase @Inject constructor(
     private val wallpaperRepository: WallpaperRepository
 ) : GeneralUseCase<WallpaperResult<List<PhotoModel>>, GePhotosRequest> {
     override suspend fun invoke(request: GePhotosRequest) = wallpaperRepository.getPhotos(request)

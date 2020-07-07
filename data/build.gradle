@@ -45,6 +45,16 @@ dependencies {
 
     //Test
     testImplementation TestLibs.junit
+    testImplementation TestLibs.androidxJunit
+    testImplementation TestLibs.googleTruth
+    testImplementation TestLibs.coreTesting
+    testImplementation TestLibs.coroutineTest
+
+    debugImplementation TestLibs.fragmentTests
+    androidTestImplementation TestLibs.androidxJunitExtension
     androidTestImplementation TestLibs.testRunner
     androidTestImplementation TestLibs.espresso
+    androidTestImplementation(TestLibs.barista) {
+        exclude group: TestLibs.excludeKotlin
+    }
 }
