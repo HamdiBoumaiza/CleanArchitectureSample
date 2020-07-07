@@ -17,8 +17,11 @@ class MainActivity :
     override val layoutResId: Int = R.layout.activity_main
 
     override fun initViews() {
-        WallpaperApplication.appComponents.inject(this)
         viewModel.getPhotos(GePhotosRequest(1, "latest"))
+    }
+
+    override fun inject() {
+        WallpaperApplication.appComponents.inject(this)
     }
 
     override fun initObservers() {

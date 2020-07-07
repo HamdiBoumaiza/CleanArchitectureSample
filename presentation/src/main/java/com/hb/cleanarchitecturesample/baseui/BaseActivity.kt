@@ -25,6 +25,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     abstract val layoutResId: Int
     abstract fun initViews()
+    abstract fun inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         appRouter = AppRouter(this)
@@ -32,6 +33,7 @@ abstract class BaseActivity : AppCompatActivity() {
         setContentView(layoutResId)
         checkInternetAvailability()
         initLoading()
+        inject()
         initViews()
     }
 

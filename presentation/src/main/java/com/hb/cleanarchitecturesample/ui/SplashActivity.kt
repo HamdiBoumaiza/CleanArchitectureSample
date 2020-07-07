@@ -12,6 +12,9 @@ class SplashActivity : BaseActivity() {
         goToHomeScreen()
     }
 
+    override fun inject() {
+    }
+
     private fun goToHomeScreen() {
         Handler().postDelayed({
             appRouter.goToActivity(MainActivity::class.java, true)

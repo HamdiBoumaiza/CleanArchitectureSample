@@ -16,7 +16,6 @@ abstract class BaseViewModelActivity<VM : BaseViewModel>(private val modelClass:
         super.onCreate(savedInstanceState)
         initObservers()
         initLoadingToggle()
-        initViews()
         viewModel.appRouter = appRouter
     }
 

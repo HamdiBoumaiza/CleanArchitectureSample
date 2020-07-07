@@ -17,6 +17,7 @@ abstract class BaseFragment : Fragment() {
 
     protected abstract val layoutResId: Int
     abstract fun initViews()
+    abstract fun inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,6 +29,7 @@ abstract class BaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        inject()
         initViews()
     }
 

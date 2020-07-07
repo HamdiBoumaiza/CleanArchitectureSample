@@ -16,7 +16,6 @@ abstract class BaseViewModelFragment<VM : BaseViewModel>(private val modelClass:
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObservers()
-        initViews()
         initLoadingToggle()
         viewModel.appRouter = appRouter
     }
