@@ -6,3 +6,8 @@
 /local.properties
 
 /build
+buildSrc/build/pluginUnderTestMetadata/plugin-under-test-metadata.properties
+
+buildSrc/build/libs/buildSrc.jar
+
+buildSrc/build/kotlin/buildSrcjar-classes.txt
