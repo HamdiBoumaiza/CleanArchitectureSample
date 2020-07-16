@@ -12,7 +12,7 @@ import com.hb.cleanarchitecturesample.WallpaperApplication
 import com.hb.cleanarchitecturesample.commun.AppRouter
 import com.hb.cleanarchitecturesample.commun.AppSharedPreferences
 import com.hb.cleanarchitecturesample.commun.toast
-import com.proxym.woqode.utils.ConnectionLiveData
+import com.hb.cleanarchitecturesample.utils.ConnectionLiveData
 
 
 abstract class BaseActivity : AppCompatActivity() {

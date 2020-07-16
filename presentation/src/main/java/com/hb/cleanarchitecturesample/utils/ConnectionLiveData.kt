@@ -1,4 +1,4 @@
-package com.proxym.woqode.utils
+package com.hb.cleanarchitecturesample.utils
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -32,6 +32,6 @@ class WallpaperApplication : Application() {
     }
 
     private fun initDI() {
-        WallpaperApplication.appComponents = DaggerAppComponent.builder().appModule(AppModule(this)).build()
+        appComponents = DaggerAppComponent.builder().appModule(AppModule(this)).build()
     }
 }
