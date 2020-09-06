@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 open class GetListPhotosUseCase @Inject constructor(
     private val wallpaperRepository: WallpaperRepository
-) : GeneralUseCase<WallpaperResult<List<PhotoModel>>, GePhotosRequest> {
+) : GeneralUseCase<GePhotosRequest,WallpaperResult<List<PhotoModel>>> {
     override suspend fun invoke(request: GePhotosRequest) = wallpaperRepository.getPhotos(request)
 }
 
